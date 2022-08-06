@@ -1,0 +1,398 @@
+/* background-color: #ae0001;
+    background-color: #eeba30;
+    background-color: #d3a625;
+    background-color: #000000; */
+
+@font-face {
+    font-family: harrypotter;
+    src: url(../src/fuente/harrypotter.ttf);
+}
+
+* {
+    margin: 0px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: #740001;
+    color: white;
+    height: 100px;
+    padding: 20px;
+}
+
+#btnMenu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: #00000063;
+}
+
+.fa-bars {
+    font-size: 35px;
+}
+
+header h1 {
+    font-family: harrypotter;
+    font-size: 80px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.btnInitial {
+    background-color: transparent;
+    border-style: none;
+}
+
+.btnInitial:hover {
+    cursor: pointer;
+}
+
+header img {
+    height: 100px;
+    /* margin-right: 20%; */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    background: #d3a425;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+header nav ul li:hover {
+    background: #00000063;
+    border-radius: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    background-image: url(https://images8.alphacoders.com/110/thumb-1920-1102284.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* .sectionMenu {
+    display: none;
+} */
+
+/* .sectionMenu li {
+    background-color: #740002df;
+    border-width: thin;
+    border-style: solid;
+    border-color: #3e0001;
+    padding: 10px;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+} */
+
+.sectionInicial {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionInicial p {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    background-color: #000000af;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.btnPotions {
+    background-color: transparent;
+    border-style: none;
+}
+
+.sectionInicial img {
+    height: 400px;
+    width: 400px;
+}
+
+.sectionInicial img:hover {
+    cursor: pointer;
+}
+
+/* Seccion de filtrado */
+.sectionFilter {
+    margin-top: 50px;
+    padding: 20px;
+    width: 90%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.485);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionFilter input {
+    border-radius: 5px;
+    border: solid rgb(185, 185, 185) 1px;
+    padding: 5px;
+    height: 30px;
+    width: 30%;
+    margin-right: 5px;
+}
+
+.sectionFilter input:focus {
+    outline: none;
+    border: solid rgb(148, 146, 146) 2px;
+}
+
+.sectionFilter select {
+    border-radius: 5px;
+    border: solid rgb(185, 185, 185) 1px;
+    padding: 3px;
+    height: 40px;
+}
+
+.sectionFilter select:focus {
+    outline: none;
+    border: solid rgb(148, 146, 146) 2px;
+}
+
+.sectionFilter {
+    display: none;
+}
+
+/* seccion Order */
+
+.sectionOrder {
+    margin-top: 50px;
+    padding: 20px;
+    width: 90%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.485);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionOrder select {
+    border-radius: 5px;
+    border: solid rgb(185, 185, 185) 1px;
+    padding: 3px;
+    height: 40px;
+}
+
+.sectionOrder select:focus {
+    outline: none;
+    border: solid rgb(148, 146, 146) 2px;
+}
+
+.sectionOrder {
+    display: none;
+}
+
+
+/* Seccion de visualizar data */
+.sectionSeeData {
+    width: 100vw;
+    height: 100%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    /* background-color: white; */
+    color: white;
+    font-weight: bold;
+    height: 80px;
+    max-width: 1440px;
+    margin: 20px;
+}
+
+th {
+    text-align: center;
+    padding: 20px;
+}
+
+td {
+    padding: 20px;
+    text-align: left;
+}
+
+thead {
+    background-color: #000000;
+    color: white;
+    border-bottom: solid 3px white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #d3a425;
+    opacity: 80%;
+    /* color: #000000; */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #740001;
+    opacity: 80%;
+    /* color: white; */
+}
+
+/* ocultando la data */
+.sectionSeeData {
+    display: none;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    height: 100px;
+    padding: 10px;
+
+}
+
+.footerContainer {
+    /* background-color: rgb(241, 17, 54); */
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.followContainer {
+    /* background-color: palegreen; */
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.fa-twitter,
+.fa-instagram,
+.fa-facebook-f {
+    margin-left: 30px;
+}
+
+.fa-js {
+    font-size: 15px;
+}
+
+.copyRightsContainer {
+    /* background-color: paleturquoise; */
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* medidas: pc: 1512px tablet: 834px cel: 375px*/
+
+/* tablet */
+@media screen and (max-width: 834px) {}
+
+/* cel */
+@media screen and (max-width: 375px) {
+
+    header {
+        height: 60px;
+    }
+
+    .headerContainer {
+        display: flex;
+        font-size: 9px;
+        justify-content: space-between;
+        margin: 5px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header img {
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    header label {
+        display: block;
+        width: 30px;
+        height: 25px;
+    }
+
+    header nav {
+        /* position: absolute; */
+        background-color: #740001;
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .fa-bars {
+        font-size: 20px;
+    }
+
+    .sectionInicial p {
+        font-size: 20px;
+    }
+
+    .sectionInicial img {
+        height: 320px;
+        width: 320px;
+    }
+
+    thead {
+        display: flex;
+        max-width: 375px;
+        font-size: 13px;
+    }
+
+    #myTable {
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        justify-content: center;
+        margin: 0;
+    }
+
+
+}

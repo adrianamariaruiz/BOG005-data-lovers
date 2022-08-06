@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/1b2b17e9e9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <header>
+    <div class="headerContainer">
+      <button class="btnInitial" id="btnInitial"><img src="./imagenes/logoHP.png" alt="logoHp"></button>
+      <h1>Harry Potter Potions</h1>
+
+      <div class="sectionMenu" id="sectionMenu">
+        <input type="checkbox" id="btnMenu">
+        <label for="btnMenu" class="labelMenu">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="optionMenu">
+          <ul>
+            <li><a href="#" id="filterLink">Filter</a></li>
+            <li><a href="#" id="orderLink">Order</a></li>
+            <li><a href="#" id="calcLink">Operations</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+  <main>
+    <section class="sectionInicial" id="sectionInicial">
+      <p>Welcome to Harry Potter`s potions page</p>
+      <button class="btnPotions" id="btnPotions"><img src="./imagenes/caldera-pociones.png" alt="caldero"></button>
+    </section>
+
+    <section id="sectionFilter" class="sectionFilter">
+      <input type="text" id="wordSearch" placeholder="Search here">
+      <select name="filter" id="filterTable">
+        <option disabled selected>Select by</option>
+        <option value="Name">Name</option>
+        <option value="Description">Description</option>
+      </select>
+    </section>
+
+    <section id="sectionOrder" class="sectionOrder">
+      <select name="orderTable" id="orderTable">
+        <option disabled selected>Order for</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A">Z-A</option>
+      </select>
+    </section>
+
+    <section class="sectionSeeData" id="sectionSeeData">
+      <table>
+        <thead>
+          <tr>
+            <th>Potion Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+          <!-- <tr>
+            <td>Nombre de la pocion</td>
+            <td>Descripcion de la pocion</td>
+          </tr> -->
+
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  <footer>
+    <div class="footerContainer">
+
+      <section class="followContainer">
+        <p>Follow | </p>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+      </section>
+
+      <hr>
+
+      <section class="copyRightsContainer">
+        <p>COPYRIGHTS</p>
+        <i class="fa-brands fa-js"> DATA LOVERS | LABORATORIA</i>
+      </section>
+
+    </div>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
