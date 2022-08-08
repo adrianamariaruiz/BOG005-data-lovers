@@ -5,12 +5,31 @@ export const filtrarFunctionName = (data, option) => {
   let dataFilter = data.filter((potions) => potions.name.toLowerCase().includes(option))
   return dataFilter
 }
+
 export const filtrarFunctionDescription = (data, option) => {
   let dataFilter = data.filter((potions) => potions.description.toLowerCase().includes(option))
   return dataFilter
 }
 
+function SortArray(x, y) {
+  if (x.name < y.name) {
+    return -1;
+  }
+  if (x.name > y.name) {
+    return 1;
+  }
+  return 0;
+}
 
+export const orderDataZA = (data) => {
+  let orderData = data.reverse(SortArray)
+  return orderData
+}
+
+export const orderDataAZ = (data) => {
+  let orderData = data.sort(SortArray)
+  return orderData
+}
 
 
 
