@@ -1,7 +1,7 @@
 
 // Interaccion con el DOM
 
-import { filtrarFunctionName, filtrarFunctionDescription } from './data.js';
+import { filtrarFunctionName, filtrarFunctionDescription, orderDataAZ, orderDataZA } from './data.js';
 import data from './data/harrypotter/data.js';
 
 // console.log(tablePotions, data);
@@ -77,13 +77,15 @@ btnInitial.addEventListener("click", () => {
 })
 
 
-
 // visualizando menu
-const btnMenu = document.getElementById("btnMenu")
-const sectionMenu = document.getElementById("sectionMenu")
+const $ = (element) => document.getElementById(element); //truco pro
+
+const btnMenu = $("btnMenu")
+// const sectionMenu = $("sectionMenu")
+const optionMenu = $("optionMenu")
 
 btnMenu.addEventListener("click", () => {
-    sectionMenu.style.display = "flex"
+    optionMenu.classList.toggle("hide")
 })
 
 // filtrado
@@ -98,34 +100,14 @@ document.getElementById("filterTable").addEventListener("change", function () {
 
             tablePotions(filtrarFunctionName(dataPotions, wordSearch))
 
-            // let resultado = dataPotions.filter(potions => potions.name.toLowerCase().includes(wordSearch))
-            // console.log(resultado)
-            //     resultado.map(potions => {
-            //         myTable.innerHTML += `
-            //     <tr>
-            //         <td>${potions.name}</td>
-            //         <td>${potions.description}</td>
-            //     </tr>
-            // `;
-            //     });
         });
     }
 
     else {
         document.getElementById("wordSearch").addEventListener("keyup", function () {
-            //         myTable.innerHTML = "";
+
             let wordSearch = document.getElementById("wordSearch").value;
             tablePotions(filtrarFunctionDescription(dataPotions, wordSearch))
-            //         let resultado = dataPotions.filter(potions => potions.description.toLowerCase().includes(wordSearch))
-            //         // console.log(resultado)
-            //         resultado.map(potions => {
-            //             myTable.innerHTML += `
-            //             <tr>
-            //                 <td>${potions.name}</td>
-            //                 <td>${potions.description}</td>
-            //             </tr>
-            //         `;
-            //         });
         });
     }
 
@@ -139,40 +121,10 @@ document.getElementById("orderTable").addEventListener("change", function () {
 
     myTable.innerHTML = "";
 
-    let result = ''
-    function SortArray(x, y) {
-        if (x.name < y.name) {
-            return -1;
-        }
-        if (x.name > y.name) {
-            return 1;
-        }
-        return 0;
-    }
     if (selectionOrder == "Z-A") {
-        result = dataPotions.reverse(SortArray)
-        // console.log(result)
-
-        result.map(potions => {
-            myTable.innerHTML += `
-            <tr>
-                <td>${potions.name}</td>
-                <td>${potions.description}</td>
-            </tr>
-          `;
-        });
+        tablePotions(orderDataZA(dataPotions))
     }
     else {
-        result = dataPotions.sort(SortArray)
-        // console.log(result)
-
-        result.map(potions => {
-            myTable.innerHTML += `
-              <tr>
-                  <td>${potions.name}</td>
-                  <td>${potions.description}</td>
-              </tr>
-          `;
-        });
+        tablePotions(orderDataAZ(dataPotions))
     }
 });

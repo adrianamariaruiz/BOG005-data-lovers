@@ -27,7 +27,7 @@ header {
     display: none;
 }
 
-header label {
+.labelMenu {
     display: none;
     width: 50px;
     height: 50px;
@@ -35,7 +35,7 @@ header label {
     text-align: center;
 }
 
-header label:hover {
+.labelMenu:hover {
     cursor: pointer;
     background: #00000063;
 }
@@ -71,24 +71,24 @@ header img {
     /* margin-right: 20%; */
 }
 
-header nav ul {
+.ulList {
     list-style: none;
     display: flex;
 }
 
-header nav ul li {
+.ulList li {
     background: #d3a425;
     border-radius: 15px;
     margin: 10px;
     padding: 10px 20px;
 }
 
-header nav ul li:hover {
+.ulList li:hover {
     background: #00000063;
     border-radius: 15px;
 }
 
-header nav ul li a {
+.ulList li a {
     color: white;
     text-decoration: none;
 }
@@ -100,29 +100,13 @@ main {
     min-height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-
-
-/* .sectionMenu {
-    display: none;
-} */
-
-/* .sectionMenu li {
-    background-color: #740002df;
-    border-width: thin;
-    border-style: solid;
-    border-color: #3e0001;
-    padding: 10px;
-    width: 160px;
-    height: 30px;
-    text-align: center;
-} */
-
 .sectionInicial {
     width: 100%;
+    margin: 70px 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,11 +268,15 @@ footer {
     color: white;
     height: 100px;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
 }
 
 .footerContainer {
     /* background-color: rgb(241, 17, 54); */
+
     display: flex;
     flex-direction: column;
     max-width: 1440px;
@@ -324,7 +312,15 @@ footer {
 /* medidas: pc: 1512px tablet: 834px cel: 375px*/
 
 /* tablet */
-@media screen and (max-width: 834px) {}
+@media screen and (max-width: 834px) {
+    header h1 {
+        font-size: 50px;
+        margin-left: 20px;
+        text-align: center;
+    }
+}
+
+
 
 /* cel */
 @media screen and (max-width: 375px) {
@@ -349,26 +345,41 @@ footer {
         margin-right: 20px;
     }
 
-    header label {
+    .labelMenu {
         display: block;
         width: 30px;
         height: 25px;
     }
 
-    header nav {
-        /* position: absolute; */
-        background-color: #740001;
-        width: 70%;
-        display: flex;
-        justify-content: flex-end;
+    #sectionMenu {
+        position: relative;
     }
 
-    header nav ul {
+    .ulList {
         flex-direction: column;
+        padding-inline-start: 0;
+    }
+
+    .ulList li {
+        font-size: 16px;
     }
 
     .fa-bars {
-        font-size: 20px;
+        font-size: 30px;
+    }
+
+    .optionMenu {
+        /* display: none; */
+        /* border-style: solid; */
+        background-color: #740001;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        z-index: 1;
+    }
+
+    .hide {
+        display: none;
     }
 
     .sectionInicial p {
