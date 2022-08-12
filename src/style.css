@@ -106,7 +106,7 @@ main {
 
 .sectionInicial {
     width: 100%;
-    margin: 70px 20px 0 20px;
+    margin: 20px 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -120,11 +120,13 @@ main {
     background-color: #000000af;
     border-radius: 15px;
     padding: 40px;
+    /* margin-top: 20px;*/
 }
 
 .btnPotions {
     background-color: transparent;
     border-style: none;
+    margin-top: 1px;
 }
 
 .sectionInicial img {
@@ -141,8 +143,10 @@ main {
     margin-top: 50px;
     padding: 20px;
     width: 90%;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.485);
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.77);
+    /* background-color: rgba(0, 0, 0, 0.552); */
+
     border-radius: 15px;
     text-align: center;
     justify-content: center;
@@ -168,6 +172,7 @@ main {
     border: solid rgb(185, 185, 185) 1px;
     padding: 3px;
     height: 40px;
+    margin-right: 10px;
 }
 
 .sectionFilter select:focus {
@@ -185,8 +190,8 @@ main {
     margin-top: 50px;
     padding: 20px;
     width: 90%;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.485);
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.77);
     border-radius: 15px;
     text-align: center;
     justify-content: center;
@@ -209,6 +214,69 @@ main {
     display: none;
 }
 
+/* Seccion de operaciones */
+.sectionOperations {
+    margin-top: 50px;
+    padding: 20px;
+    width: 90%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.77);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionOperations input {
+    border-radius: 5px;
+    border: solid rgb(185, 185, 185) 1px;
+    padding: 5px;
+    height: 25px;
+    width: 35%;
+    margin-right: 5px;
+}
+
+.inputBtn {
+    /* border: solid black 1px; */
+    width: 100%;
+}
+
+.sectionOperations input:focus {
+    outline: none;
+    border: solid rgb(148, 146, 146) 2px;
+}
+
+.sectionOperations {
+    display: none;
+}
+
+.check {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border: solid rgb(185, 185, 185) 1px;
+    padding: 5px;
+    height: 40px;
+    width: 160px;
+    margin-right: 5px;
+}
+
+.check:hover {
+    cursor: pointer;
+    background-color: #d3a425;
+}
+
+.checkP {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.sectionOperationOn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Seccion de visualizar data */
 .sectionSeeData {
@@ -218,6 +286,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 70px;
 }
 
 table {
@@ -227,7 +296,7 @@ table {
     font-weight: bold;
     height: 80px;
     max-width: 1440px;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 th {
@@ -248,14 +317,12 @@ thead {
 
 tbody tr:nth-child(odd) {
     background-color: #d3a425;
-    opacity: 80%;
-    /* color: #000000; */
+    opacity: 90%;
 }
 
 tbody tr:nth-child(even) {
     background-color: #740001;
-    opacity: 80%;
-    /* color: white; */
+    opacity: 90%;
 }
 
 /* ocultando la data */
@@ -266,35 +333,36 @@ tbody tr:nth-child(even) {
 footer {
     background-color: #000000;
     color: white;
-    height: 100px;
-    padding: 10px;
+    height: 70px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
-
+    margin-right: 10px;
 }
 
 .footerContainer {
     /* background-color: rgb(241, 17, 54); */
-
     display: flex;
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 96%;
     margin: auto;
 }
 
 .followContainer {
     /* background-color: palegreen; */
     display: flex;
-    padding: 10px;
+    padding: 8px;
     margin-top: 10px;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .fa-twitter,
 .fa-instagram,
 .fa-facebook-f {
     margin-left: 30px;
+    font-size: 20px;
+    color: white;
 }
 
 .fa-js {
@@ -303,10 +371,13 @@ footer {
 
 .copyRightsContainer {
     /* background-color: paleturquoise; */
-    font-size: 12px;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+}
+
+.copyRightsContainer p {
+    font-size: 14px;
 }
 
 /* medidas: pc: 1512px tablet: 834px cel: 375px*/
@@ -341,8 +412,7 @@ footer {
     }
 
     header img {
-        height: 50px;
-        margin-right: 20px;
+        height: 60px;
     }
 
     .labelMenu {
@@ -353,6 +423,23 @@ footer {
 
     #sectionMenu {
         position: relative;
+    }
+
+    .sectionFilter {
+        width: 80%;
+    }
+
+    .sectionOrder {
+        width: 80%;
+    }
+
+    .sectionOperations {
+        width: 80%;
+    }
+
+    .inputBtn input {
+        margin-bottom: 10px;
+        width: 80%;
     }
 
     .ulList {
@@ -369,8 +456,6 @@ footer {
     }
 
     .optionMenu {
-        /* display: none; */
-        /* border-style: solid; */
         background-color: #740001;
         position: absolute;
         top: 60px;
@@ -403,6 +488,39 @@ footer {
         font-size: 13px;
         justify-content: center;
         margin: 0;
+    }
+
+    footer {
+        height: 80px;
+        max-width: 96%;
+    }
+
+    .followContainer {
+        /* border: solid white 2px; */
+        display: flex;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .fa-twitter,
+    .fa-instagram,
+    .fa-facebook-f {
+        margin-left: 15px;
+    }
+
+    .fa-js {
+        font-size: 10px;
+    }
+
+    .copyRightsContainer {
+        /* background-color: paleturquoise; */
+        font-size: 12px;
+    }
+
+    .copyRightsContainer p {
+        font-size: 12px;
+        margin-right: 5px;
     }
 
 

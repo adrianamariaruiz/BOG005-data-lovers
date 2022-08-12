@@ -31,6 +31,19 @@ export const orderDataAZ = (data) => {
   return orderData
 }
 
+//funcion pura para calcular porcentajes de coincidencia
+export const calcCoincidences = (data, value) => {
+  let newArrayResult = data.filter((potions) => potions.description.toLowerCase().includes(value))
+  let percentage = (newArrayResult.length / data.length) * 100
+  // return percentage.toFixed(2)
+  return parseInt(percentage, 10)
+}
+
+export const viewCoincidences = (data, value) => {
+  let newArrayResult = data.filter((potions) => potions.description.toLowerCase().includes(value))
+  return newArrayResult
+}
+
 
 
 

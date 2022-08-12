@@ -1,8 +1,9 @@
 
 // Interaccion con el DOM
 
-import { filtrarFunctionName, filtrarFunctionDescription, orderDataAZ, orderDataZA } from './data.js';
+import { filtrarFunctionName, filtrarFunctionDescription, orderDataAZ, orderDataZA, calcCoincidences, viewCoincidences } from './data.js';
 import data from './data/harrypotter/data.js';
+
 
 // console.log(tablePotions, data);
 
@@ -23,7 +24,11 @@ const sectionFilter = document.getElementById("sectionFilter")
 const filterLink = document.getElementById("filterLink")
 
 const sectionOrder = document.getElementById("sectionOrder")
+const orderTable = document.getElementById("orderTable")
 const orderLink = document.getElementById("orderLink")
+
+const sectionOperations = document.getElementById("sectionOperations")
+const calcLink = document.getElementById("calcLink")
 
 // funcion para visualizando la data en una tabla
 const tablePotions = (info) => {
@@ -50,6 +55,7 @@ tablePotions(dataPotions)
 btnPotions.addEventListener("click", () => {
     sectionSeeData.style.display = "flex"
     sectionInicial.style.display = "none"
+    tablePotions(orderDataAZ(dataPotions))
 })
 
 // para ver el input filter
@@ -58,6 +64,8 @@ filterLink.addEventListener("click", () => {
     sectionSeeData.style.display = "flex"
     sectionInicial.style.display = "none"
     sectionOrder.style.display = "none"
+    sectionOperations.style.display = "none"
+    tablePotions(dataPotions)
 })
 
 // para ver el input order
@@ -66,6 +74,8 @@ orderLink.addEventListener("click", () => {
     sectionSeeData.style.display = "flex"
     sectionInicial.style.display = "none"
     sectionFilter.style.display = "none"
+    sectionOperations.style.display = "none"
+    orderTable.value = "orderFor"
 })
 
 // para volver a la pagina inicial
@@ -74,6 +84,17 @@ btnInitial.addEventListener("click", () => {
     sectionSeeData.style.display = "none"
     sectionFilter.style.display = "none"
     sectionInicial.style.display = "flex"
+    sectionOperations.style.display = "none"
+})
+
+// para ver el input de operaciones
+calcLink.addEventListener("click", () => {
+    sectionOperations.style.display = "flex"
+    sectionSeeData.style.display = "flex"
+    sectionFilter.style.display = "none"
+    sectionInicial.style.display = "none"
+    sectionOrder.style.display = "none"
+    tablePotions(dataPotions)
 })
 
 
@@ -89,14 +110,15 @@ btnMenu.addEventListener("click", () => {
 })
 
 // filtrado
-document.getElementById("filterTable").addEventListener("change", function () {
-    let myTable = document.getElementById("myTable")
-    let seleccionFiltro = document.getElementById("filterTable").value;
+
+$("filterTable").addEventListener("change", function () {
+    let myTable = $("myTable")
+    let seleccionFiltro = $("filterTable").value;
 
     if (seleccionFiltro === "Name") {
-        document.getElementById("wordSearch").addEventListener("keyup", function () {
+        $("wordSearch").addEventListener("keyup", function () {
             myTable.innerHTML = "";
-            let wordSearch = document.getElementById("wordSearch").value;
+            let wordSearch = $("wordSearch").value;
 
             tablePotions(filtrarFunctionName(dataPotions, wordSearch))
 
@@ -104,9 +126,9 @@ document.getElementById("filterTable").addEventListener("change", function () {
     }
 
     else {
-        document.getElementById("wordSearch").addEventListener("keyup", function () {
+        $("wordSearch").addEventListener("keyup", function () {
 
-            let wordSearch = document.getElementById("wordSearch").value;
+            let wordSearch = $("wordSearch").value;
             tablePotions(filtrarFunctionDescription(dataPotions, wordSearch))
         });
     }
@@ -115,9 +137,9 @@ document.getElementById("filterTable").addEventListener("change", function () {
 
 
 // Funcion de ordenar de forma ascendente y descendente
-document.getElementById("orderTable").addEventListener("change", function () {
-    let myTable = document.getElementById("myTable")
-    let selectionOrder = document.getElementById("orderTable").value;
+$("orderTable").addEventListener("change", function () {
+    let myTable = $("myTable")
+    let selectionOrder = $("orderTable").value;
 
     myTable.innerHTML = "";
 
@@ -128,3 +150,22 @@ document.getElementById("orderTable").addEventListener("change", function () {
         tablePotions(orderDataAZ(dataPotions))
     }
 });
+
+// Funcion de calcular de acuerdo a la data
+$("check").addEventListener("click", function () {
+    let myTable = $("myTable")
+    let wordResult = $("wordResult").value;
+
+    myTable.innerHTML = "";
+
+    tablePotions(viewCoincidences(dataPotions, wordResult))
+
+    if (wordResult.length === 0) {
+        $("resultOperations").innerHTML = ""
+    }
+    else {
+        $("resultOperations").innerHTML = "The " + calcCoincidences(dataPotions, wordResult) + "%" + " of the potions refer to " + wordResult;
+    }
+
+
+})

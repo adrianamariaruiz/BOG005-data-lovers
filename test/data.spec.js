@@ -1,4 +1,4 @@
-import { filtrarFunctionName, filtrarFunctionDescription, orderDataZA, orderDataAZ } from '../src/data.js';
+import { filtrarFunctionName, filtrarFunctionDescription, orderDataZA, orderDataAZ, calcCoincidences, viewCoincidences } from '../src/data.js';
 
 describe('probar funciones puras', () => {
   it('filtrarFunctionName sea una funcion', () => {
@@ -55,6 +55,36 @@ describe('probar funciones puras', () => {
     expect(resultado).toEqual(resu);
   });
 
+});
+
+describe('probar funciones puras', () => {
+  it('calcCoincidences sea una funcion', () => {
+    expect(typeof calcCoincidences).toBe('function');
+  });
+
+  it('calcCoincidences calcular el porcentaje de coincidencia dada una busqueda', () => {
+
+    const arr1 = [{ name: 'hola', description: 'hola mundo' }, { name: 'nom2', description: 'chao mundo' }]
+    const resultado = calcCoincidences(arr1, 'mundo')
+
+    const resu = 100
+
+    expect(resultado).toEqual(resu);
+  });
+
+  it('viewCoincidences sea una funcion', () => {
+    expect(typeof viewCoincidences).toBe('function');
+  });
+
+  it('viewCoincidences ver los resultados dada una busqueda', () => {
+
+    const arr1 = [{ name: 'hola', description: 'hola mundo' }, { name: 'nom2', description: 'chao mundo' }]
+    const resultado = viewCoincidences(arr1, 'mundo')
+
+    const resu = [{ name: 'hola', description: 'hola mundo' }, { name: 'nom2', description: 'chao mundo' }]
+
+    expect(resultado).toEqual(resu);
+  });
 
 
 });

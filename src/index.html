@@ -39,20 +39,30 @@
     </section>
 
     <section id="sectionFilter" class="sectionFilter">
-      <input type="text" id="wordSearch" placeholder="Search here">
       <select name="filter" id="filterTable">
         <option disabled selected>Select by</option>
         <option value="Name">Name</option>
         <option value="Description">Description</option>
       </select>
+      <input type="text" id="wordSearch" placeholder="Search here">
     </section>
 
     <section id="sectionOrder" class="sectionOrder">
       <select name="orderTable" id="orderTable">
-        <option disabled selected>Order for</option>
+        <option value="orderFor" disabled selected>Order for</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A">Z-A</option>
       </select>
+    </section>
+
+    <section id="sectionOperations" class="sectionOperations sectionOperationOn">
+      <div class="inputBtn">
+        <input type="text" id="wordResult" placeholder="Result By">
+        <button id="check" class="check">Check</button>
+      </div>
+      <div class="contentCheck">
+        <p class="checkP" id="resultOperations"></p>
+      </div>
     </section>
 
     <section class="sectionSeeData" id="sectionSeeData">
@@ -79,9 +89,9 @@
 
       <section class="followContainer">
         <p>Follow | </p>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook-f"></i>
+        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
       </section>
 
       <hr>
