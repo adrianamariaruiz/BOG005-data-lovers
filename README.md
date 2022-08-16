@@ -1,9 +1,9 @@
-# Data Lovers
+# Harry Potter Potions | Web page
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Investigacion de usuario](#2-investigacion-de-usuario)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -14,82 +14,49 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+En este proyecto se diseño y contruyo una **_pagina web_** con el objetivo de poder visualizar, filtrar, ordenar y ver porcentajes de coincidencia de acuerdo a las posiones que maneja la saga de **_Harry Potter_**.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+* **Pantalla inicial**.
+  Este pantalla proporciona al usuario la posibilidad de acceder a diferentes acciones.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+![Pantalla Inicial](./src/imagenes/PantallaInicial.png)
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+* **Pantalla de visualizacion**.
+  Este pantalla proporciona la lista de las diferentes posiones que existen en la saga de peliculas de Harry Poter, esta lista esta conformada por el nombre de la posion y su respectiva descripcion.
 
-## 2. Resumen del proyecto
+![Pantalla Inicial](./src/imagenes/PantallaInicial.png)
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+## 2. Investigacion de usuario.
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+De acuerdo a ------ solo se requiere realizar una investigacion de usuario a cinco (5) para conocer los lineamientos requeridos de un proyecto, dada esta informacion se realizo una primera pregunta para escoger el tema mas atractivo.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+**Primera Pregunta:**
 
-Estos son datos que te proponemos:
+1.	¿Cuál de las siguientes temáticas de Harry Potter te gusta más?
+a)	Información sobre los personajes: nombre, especie, género, fecha de nacimiento, saber si es muggle o conocer su casa de estudio.
+b)	Sistema de casas ( Gryffindor, Hufflepuff, Ravenclaw y Slytherin: cuantos estudiantes hay por cada casa, fundador, elemento, colores de la casa, animal, rasgos.
+c)	Hechizos: conocerlos, invocarlos y estar preparados para ellos.
+d)	Libros: cuantos libros han sido publicados y visualizar que personajes aparecen en cada libro, año de publicación, copias vendidas, paginas, editorial.
+e)	Pociones: Lista de las pociones que existen, para que se usan, cuáles son sus ingredientes, efectos secundarios y si es mortal o no.
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+![Entrevista pregunta 1 - 1](./src/imagenes/entrevP1-1.jpeg)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+![Entrevista pregunta 1 - 2](./src/imagenes/entrevP1-2.jpeg)
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+![Entrevista pregunta 1 - 3](./src/imagenes/entrevP1-3.jpeg)
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+**Seleccion del estilo**
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+Para el desarrollo de la pagina web se dise;o en **_Figma_** dos diferentes estilos de pagina y se pregunto al usuario cual era el diseño mas atractivo visualmente, si era intuitiva y si reconocian su funcionamiento facilmente, a continuacion la respuestas:
 
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  - [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
+![Entrevista pregunta 2 - 1](./src/imagenes/entrevP2-1.jpeg)
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+![Entrevista pregunta 2 - 2](./src/imagenes/entrevP2-2.jpeg)
+
+![Entrevista pregunta 2 - 3](./src/imagenes/entrevP3-3.jpeg)
 
 ## 3. Objetivos de aprendizaje
 
