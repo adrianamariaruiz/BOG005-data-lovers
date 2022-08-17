@@ -58,6 +58,67 @@ Para el desarrollo de la pagina web se dise;o en **_Figma_** dos diferentes esti
 
 ![Entrevista pregunta 2 - 3](./src/imagenes/entrevP3-3.jpeg)
 
+## 3. Historias de usuario
+
+Dadas las preferencias del usuario se planearon las historias de usuario, distribuidas asi:
+
+**1. Primera historia de usuario**
+
+**Como**: Como usuaria
+**Quiero**: Quiero visualizar la lista de pociones del mundo de Harry Potter
+**Para**: Para conocerlas y entenderlas
+
+**Criterios de aceptacion**:
+  * Que tenga el header con logo, con un boton de visualizar (completo).
+  * Que tenga lista de pociones: nombre y su descripcion.
+  * que tenga el footer: iconos, fan page y redes sociales.
+  *  Fondo tematico de Harry Potter en el main-paleta de colores.
+
+**Prototipo baja fidelidad Historia de usuario No. 1**:
+
+![Historia Usario prototipo baja](./src/imagenes/historiaU1PrototipoBaja.png)
+
+**Prototipo alta fidelidad Historia de usuario No. 1**:
+
+![Historia Usario prototipo alta pc](./src/imagenes/historiaU1PrototipoAltaPc.png)
+
+![Historia Usario prototipo alta ipad](./src/imagenes/historiaU1PrototipoAltaIpad.png)
+
+![Historia Usario prototipo alta celular](./src/imagenes/historiaU1PrototipoAltaCelular.png)
+
+**2. Segunda historia de usuario**
+
+**Como**: Como usuaria
+**Quiero**: Quiero filtrar la información por nombre o por descripción o poder ordenar la lista de la A-Z y de la Z-A
+**Para**: Para visualizar la que quiero o necesito de una manera mas facil
+
+**Criterios de aceptacion**:
+  * Incluir las opciones en el header de filtrado, ordenar, y calcular.
+  * Realizar logo clickeable y que redirija a la pagina inicial.
+  * Implementar pagina de bienvenida con un parrafo y un boton para ver la lista de pociones
+  *  Que la opcion filtrado, filtre por nombre y por descripcion.
+  * Mostrar el input de filtrado en la pantalla y que sea funcional.
+  * Que al filtrar muestre en la pantalla solo las opciones coincidan con la busqueda.
+  * Que la opcion ordenar, ordene los nombres de las pociones de A-Z y de Z-A.
+  * Realizar el menu desplegable solo en dispositivos moviles.
+  * Que el footer quede estatico.
+  * Hacer el test del filter
+  * Hacer test de order
+
+**Prototipo baja fidelidad Historia de usuario No. 2**:
+
+![Historia Usario prototipo baja](./src/imagenes/historiaU2PrototipoBaja1.png)
+
+![Historia Usario prototipo baja](./src/imagenes/historiaU2PrototipoBaja2.png)
+
+**Prototipo alta fidelidad Historia de usuario No. 1**:
+
+![Historia Usario prototipo alta pc](./src/imagenes/historiaU2PrototipoAltaPc.png)
+
+![Historia Usario prototipo alta ipad](./src/imagenes/historiaU2PrototipoAltaIpad.png)
+
+![Historia Usario prototipo alta pagina inicial](./src/imagenes/historiaU2PrototipoPagInicial.png)
+
 ## 3. Objetivos de aprendizaje
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
