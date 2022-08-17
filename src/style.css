@@ -414,19 +414,15 @@ footer {
 
     .sectionSeeData {
       width: 90vw;
-      /*height: 100%;
-      margin: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 70px;*/
       font-size: 18px;
       font-weight: normal;
   }
 
+    .sectionOperations {
+      height: 50px;
+  }
+
 }
-
-
 
 /* cel */
 @media screen and (max-width: 375px) {
@@ -558,5 +554,22 @@ footer {
         margin-right: 5px;
     }
 
+    .sectionOperations {
+      height: 70px;
+      margin-top: 20px;
+  }
+
+    .sectionOperationOn {
+      height: 80px;
+  }
+
+  .checkP {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+    .sectionSeeData {
+      margin-top: 10px;
+  }
 
 }
