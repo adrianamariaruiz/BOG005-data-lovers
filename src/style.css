@@ -384,11 +384,46 @@ footer {
 
 /* tablet */
 @media screen and (max-width: 834px) {
-    header h1 {
-        font-size: 50px;
-        margin-left: 20px;
-        text-align: center;
+
+      header {
+        height: 80px;
     }
+
+    header h1 {
+      font-size: 45px;
+      font-weight: normal;
+  }
+
+    header img {
+      height: 70px;
+      margin-right: 5px;
+  }
+
+    .sectionInicial {
+      margin-top: 60px;
+  }
+
+    .sectionInicial p {
+      font-size: 40px;
+  }
+
+    .sectionInicial img {
+      height: 320px;
+      width: 320px;
+  }
+
+    .sectionSeeData {
+      width: 90vw;
+      /*height: 100%;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 70px;*/
+      font-size: 18px;
+      font-weight: normal;
+  }
+
 }
 
 
